@@ -25,4 +25,12 @@ public class DoctorService
 
         return listOfAllDoctors;
     }
+
+    public void createDoctor(Doctor doctor) {
+        doctorRepository.save(doctor);
+    }
+
+    public Doctor getById(Long id) {
+        return doctorRepository.findById(id);
+    }
 }

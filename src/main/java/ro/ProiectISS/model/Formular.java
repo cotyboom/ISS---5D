@@ -1,10 +1,6 @@
 package ro.ProiectISS.model;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import ro.ProiectISS.abstractElement.Human;
-import ro.ProiectISS.enumerable.Rol;
-import ro.ProiectISS.enumerable.Sex;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -25,7 +21,7 @@ public class Formular
     private Long id;
 
     @Column
-    private Date dataDonare;
+    private Date date;
 
     @Column
     private Integer varsta;
@@ -46,9 +42,9 @@ public class Formular
     private String numePacient;
 
 
-    public Formular(Date dataDonare, Integer varsta, Integer greutate, List<Intrebare> listIntrebare, Date dataMenstruatie, Date dataNastereCopil, String numePacient)
+    public Formular(Date date, Integer varsta, Integer greutate, List<Intrebare> listIntrebare, Date dataMenstruatie, Date dataNastereCopil, String numePacient)
     {
-        this.dataDonare = dataDonare;
+        this.date = date;
         this.varsta = varsta;
         this.greutate = greutate;
         this.listIntrebare = listIntrebare;
