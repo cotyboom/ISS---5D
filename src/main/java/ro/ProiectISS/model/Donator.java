@@ -1,7 +1,6 @@
 package ro.ProiectISS.model;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import ro.ProiectISS.abstractElement.Human;
 import ro.ProiectISS.enumerable.Rol;
 import ro.ProiectISS.enumerable.Sex;
@@ -28,7 +27,7 @@ public class Donator extends Human
     @OneToMany(targetEntity = Analize.class, cascade = CascadeType.ALL)
     private List<Analize> listAnalize;
 
-    public Donator(String nume, String prenume, Integer CNP, Integer telefon, String adresa, String email, String username, String password, Sex sex, Rol rol, List<Formular> listFormular, List<Analize> listAnalize)
+    public Donator(String nume, String prenume, String CNP, Integer telefon, String adresa, String email, String username, String password, Sex sex, Rol rol, List<Formular> listFormular, List<Analize> listAnalize)
     {
         super(nume,prenume,CNP,telefon,adresa,email,username,password,sex);
         this.rol = rol;

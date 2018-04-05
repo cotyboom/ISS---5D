@@ -24,4 +24,13 @@ public class DonatorService
         return listOfAllDonatori;
     }
 
+    public void createDonator(Donator donator)
+    {
+        donatorRepository.save(donator);
+    }
+
+    public Donator getById(Long id) {
+        return donatorRepository.findById(id);
+    }
+
 }

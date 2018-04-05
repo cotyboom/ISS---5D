@@ -23,4 +23,12 @@ public class AnalizeService
 
         return listOfAllAnalize;
     }
+    public void createAnalize(Analize analize)
+    {
+        analizeRepository.save(analize);
+    }
+
+    public Analize getById(Long id) {
+        return analizeRepository.findById(id);
+    }
 }

@@ -23,4 +23,13 @@ public class FormularService
 
         return listofAllFormulare;
     }
+
+    public void createFormular(Formular formular)
+    {
+        formularRepository.save(formular);
+    }
+
+    public Formular getById(Long id) {
+        return formularRepository.findById(id);
+    }
 }

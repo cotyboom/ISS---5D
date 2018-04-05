@@ -25,7 +25,7 @@ public abstract class Human
     private String prenume;
 
     @Column
-    private Integer CNP;
+    private String CNP;
 
     @Column
     private Integer telefon;
@@ -46,7 +46,7 @@ public abstract class Human
     private Sex sex;
 
 
-    public Human(String nume, String prenume, Integer CNP, Integer telefon, String adresa, String email, String username, String password, Sex sex)
+    public Human(String nume, String prenume, String CNP, Integer telefon, String adresa, String email, String username, String password, Sex sex)
     {
         this.nume = nume;
         this.prenume = prenume;
