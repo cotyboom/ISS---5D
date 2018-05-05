@@ -2,16 +2,141 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23d0692f-ba7d-4ce4-90c9-61936ffb867d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/AnalizeRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/DonatorRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/FormularRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/AnalizeService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DonatorService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/FormularService.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ProiectISS.iml" afterPath="$PROJECT_DIR$/ProiectISS.iml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Acasa.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Acasa.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Doctor.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Doctor.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Donator.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Donator.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Index.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Login.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Login.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Login_v2/index.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Login_v2/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/Personal.html" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/Personal.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/bg-01.jpg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/bg-01.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/bg-01.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/bg-01.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/css/bg-01.jpg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/css/bg-01.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/css/util.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/css/util.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/delete.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/delete.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/donareSange1.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/donareSange1.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/donareSange2.jpg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/donareSange2.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/donation.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/donation.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/edit.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/edit.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/css/font-awesome.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/animated.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/animated.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/bordered-pulled.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/core.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/core.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/fixed-width.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/font-awesome.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/icons.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/icons.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/larger.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/larger.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/list.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/list.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/mixins.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/path.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/path.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/rotated-flipped.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/screen-reader.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/stacked.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/less/variables.less" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/less/variables.less" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_animated.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_core.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_icons.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_larger.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_list.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_mixins.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_path.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_stacked.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/font-awesome-4.7.0/scss/font-awesome.scss" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/css/material-design-iconic-font.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/css/material-design-iconic-font.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/css/material-design-iconic-font.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/css/material-design-iconic-font.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Black.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Black.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-BlackItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-BlackItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Bold.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Bold.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-BoldItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-BoldItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-ExtraBold.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-ExtraBold.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-ExtraBoldItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-ExtraLight.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-ExtraLight.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-ExtraLightItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Italic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Italic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Light.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Light.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-LightItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-LightItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Medium.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Medium.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-MediumItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-MediumItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Regular.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Regular.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-SemiBold.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-SemiBold.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-SemiBoldItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-Thin.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-Thin.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/fonts/poppins/Poppins-ThinItalic.ttf" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/fonts/poppins/Poppins-ThinItalic.ttf" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/images/icons/favicon.ico" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/images/icons/favicon.ico" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/js/main.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/login.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/login.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/logo.jpg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/logo.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/logo.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/logo.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/lupa.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/lupa.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/mail.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/mail.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/map.jpg" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/map.jpg" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/proces.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/proces.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/style.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/telefon.png" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/telefon.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/animate/animate.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/animate/animate.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/animsition/css/animsition.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/animsition/css/animsition.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/animsition/css/animsition.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/animsition/css/animsition.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/animsition/js/animsition.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/animsition/js/animsition.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/animsition/js/animsition.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/animsition/js/animsition.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-grid.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-grid.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-grid.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-grid.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-reboot.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-reboot.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-reboot.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/css/bootstrap.min.css.map" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/js/bootstrap.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/js/popper.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/js/popper.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/js/popper.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/js/popper.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/bootstrap/js/tooltip.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/countdowntime/countdowntime.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/countdowntime/countdowntime.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/css-hamburgers/hamburgers.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/css-hamburgers/hamburgers.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/css-hamburgers/hamburgers.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/css-hamburgers/hamburgers.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/daterangepicker/daterangepicker.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/daterangepicker/daterangepicker.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/daterangepicker/daterangepicker.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/daterangepicker/daterangepicker.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/daterangepicker/moment.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/daterangepicker/moment.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/daterangepicker/moment.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/daterangepicker/moment.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/jquery/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/jquery/jquery-3.2.1.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/perfect-scrollbar/perfect-scrollbar.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/perfect-scrollbar/perfect-scrollbar.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/select2/select2.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/select2/select2.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/select2/select2.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/select2/select2.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/select2/select2.min.css" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/select2/select2.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Frontend/vendor/select2/select2.min.js" afterPath="$PROJECT_DIR$/src/main/resources/FrontEnd/vendor/select2/select2.min.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/AnalizeRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/DonatorRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/FormularRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/AnalizeService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DonatorService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/FormularService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,93 +185,78 @@
       <file leaf-file-name="Doctor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/model/Doctor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoctorService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DoctorService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="8" column="77" lean-forward="true" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnalizeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/AnalizeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DonatorService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DonatorService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormularService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/FormularService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Formular.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/model/Formular.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnalizeRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/AnalizeRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoctorRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/DoctorRepository.java">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoctorService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DoctorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Acasa.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Acasa.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Doctor.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Doctor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Donator.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Donator.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/web/ViewConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="64" lean-forward="false" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,26 +264,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DonatorRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/DonatorRepository.java">
+      <file leaf-file-name="HttpServlet.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.16/tomcat-embed-core-8.5.16.jar!/javax/servlet/http/HttpServlet.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormularRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/repository/FormularRepository.java">
+      <file leaf-file-name="Personal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Personal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,7 +306,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/ProiectISS/Sex.java" />
@@ -222,6 +327,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/AnalizeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/FormularService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DonatorService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/ProiectISS/web/ViewConfig.java" />
       </list>
     </option>
   </component>
@@ -258,6 +365,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,25 +424,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ProiectISS" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ISS---5D" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ISS---5D" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ProiectISS" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ISS---5D" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ISS---5D" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ProiectISS" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ISS---5D" type="b2602c69:ProjectViewProjectNode" />
@@ -343,13 +433,20 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ISS---5D" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ISS---5D" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,6 +455,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -390,6 +493,25 @@
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ro.ProiectISS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ro.ProiectISS.Application" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProiectISS" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -465,6 +587,11 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -487,43 +614,66 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8746000" />
+    <option name="totallyTimeSpent" value="11624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3866878" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829046" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5378289" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.79605263" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2647504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3866878" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,16 +687,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/abstractElement/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/model/Doctor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -559,9 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,9 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -579,9 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,9 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,9 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -609,9 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,9 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,9 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,9 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,9 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,9 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -687,9 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,9 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,37 +840,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.proprieties" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.proprieties" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5815e012-7659-4f76-9319-c3c47a7e345a/console.sql" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,9 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,9 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,9 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,9 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="37" column="1" lean-forward="false" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,16 +936,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/model/Doctor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -885,9 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,9 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,9 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -915,9 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,11 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -937,11 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -949,18 +993,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/service/DoctorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="8" column="77" lean-forward="true" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+        <state relative-caret-position="51">
+          <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.16/tomcat-embed-core-8.5.16.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Doctor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/FrontEnd/Acasa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/ProiectISS/web/ViewConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="64" lean-forward="false" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
