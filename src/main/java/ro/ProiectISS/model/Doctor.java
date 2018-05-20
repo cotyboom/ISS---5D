@@ -25,6 +25,7 @@ public class Doctor extends Human
     public Doctor(String nume, String prenume, String CNP, Integer telefon, String adresa, String email, String username, String password, Sex sex, Rol rol)
     {
         super(nume,prenume,CNP,telefon,adresa,email,username,password,sex);
+        rol = Rol.DOCTOR;
         this.rol = rol;
     }
 }

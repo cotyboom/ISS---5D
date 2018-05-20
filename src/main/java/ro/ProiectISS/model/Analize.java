@@ -6,7 +6,6 @@ import ro.ProiectISS.enumerable.RH;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 
 @Entity
@@ -31,14 +30,15 @@ public class Analize
     @Column
     private RH rH;
 
-    @OneToMany(targetEntity = Intrebare.class, cascade = CascadeType.ALL)
-    private List<Intrebare> listIntrebare;
+    @Column
+    private String idDonator;
 
-    public Analize(Date date, GrupaSangvina grupaSangvina, RH rH, List<Intrebare> listIntrebare)
+
+    public Analize(Date date, GrupaSangvina grupaSangvina, RH rH, String idDonator)
     {
         this.date = date;
         this.grupaSangvina = grupaSangvina;
         this.rH = rH;
-        this.listIntrebare = listIntrebare;
+        this.idDonator = idDonator;
     }
 }

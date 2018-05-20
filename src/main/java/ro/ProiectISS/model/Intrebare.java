@@ -25,9 +25,17 @@ public class Intrebare
     @Column
     private RaspunsIntrebare descriere;
 
-    public Intrebare(String intrebare, RaspunsIntrebare descriere)
+    @Column
+    private String idAnalize;
+
+    @Column
+    private String idFormular;
+
+    public Intrebare(String intrebare, RaspunsIntrebare descriere, String idAnalize, String idFormular)
     {
         this.intrebare = intrebare;
         this.descriere = descriere;
+        this.idAnalize = idAnalize;
+        this.idFormular = idFormular;
     }
 }
