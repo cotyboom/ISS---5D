@@ -22,7 +22,7 @@ public class Personal extends Human
     @Column
     private Rol rol;
 
-    public Personal(String nume, String prenume, String CNP, Integer telefon, String adresa, String email, String username, String password, Sex sex, Rol rol)
+    public Personal(String nume, String prenume, String CNP, String telefon, String adresa, String email, String username, String password, Sex sex, Rol rol)
     {
         super(nume,prenume,CNP,telefon,adresa,email,username,password,sex);
         this.rol = Rol.PERSONAL;

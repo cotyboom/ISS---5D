@@ -6,6 +6,210 @@
     <title>Personal centru</title>
     <link rel="stylesheet" type="text/css" href="/FrontEnd/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script language="JavaScript" type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        id = window.location.pathname.split("/")[2];
+        var gendre;
+        var rh;
+        var grupa;
+
+        function checkMale() {
+            gendre = 'MALE';
+        }
+
+        function checkFemale() {
+            gendre = 'FEMALE';
+        }
+
+        function checkPozitiv() {
+            rh = 'POZITIVE';
+        }
+
+        function checkNegativ() {
+            rh = 'NEGATIVE';
+        }
+
+        function checkO1() {
+            grupa = 'O';
+        }
+        function checkA2() {
+            grupa = 1;
+        }
+
+        function checkB3() {
+            grupa = 2;
+        }
+
+        function checkAB4() {
+            grupa = 3;
+        }
+        function getDonator() {
+            $('#tabelDonatori tbody').empty();
+            $.getJSON('http://localhost:8080/donator/', function (data) {
+                $.each(data, function (index, item) {
+                    var row = '<tr>';
+                    row = row + '<td class="datanume" >' + item.nume + '</td>';
+                    row = row + '<td class="dataprenume" >' + item.prenume + '</td>';
+                    row = row + '<td class="datacnp" >' + item.cnp + '</td>';
+                    row = row + '<td class="datasex" >' + item.sex + '</td>';
+                    row = row + '<td class="datatelefon" >' + item.telefon + '</td>';
+                    row = row + '<td class="dataadresa" >' + item.adresa + '</td>';
+                    row = row + '<td class="dataemail" >' + item.email + '</td>';
+
+
+                    // row = row + '<td><button class="btn edit-item editMenu_item"><span class="glyphicon active glyphicon-pencil" aria-hidden="true"></span></button></td>';
+                    row = row + '<td><button class="btn btn-danger remove-item deleteMenu_item">X</button></td>';
+                    row = row + '</tr>';
+                    $('#tabelDonatori tbody:last-child').append(row);
+                });
+            });
+        }
+
+        function clearFields() {
+            $('#nume').val('');
+            $('#prenume').val('');
+            $('#cnp').val('');
+            $('#sex').val('');
+            $('#telefon').val('');
+            $('#adresa').val('');
+            $('#email').val('');
+            $('#username').val('');
+            $('#password').val('');
+        }
+
+        $(document).ready(
+            function ()
+            {
+                getDonator();
+                checkFemale();
+                checkO1();
+                checkPozitiv();
+
+                $(document).on('click', '#Salveaza', function ()
+                {
+
+                    var nume = $('#nume').val();
+                    var prenume = $('#prenume').val();
+                    var cnp = $('#cnp').val();
+                    var sex = gendre;
+                    console.log(sex);
+                    var telefon = $('#telefon').val();
+                    var adresa = $('#adresa').val();
+                    var email = $('#email').val();
+
+                    var rol = 'EMPTY';
+                    var password = $('#password').val();
+                    clearFields();
+                    var jsonCreate = '{"nume":"' + nume + '","prenume":"' + prenume + '","cnp":"' + cnp + '","sex":"' + sex + '","telefon":"' + telefon + '","adresa":"' + adresa + '","email":"' + email + '","rol":"' + rol + '","password":"'+ password + '","grupa":"'+ grupa +'","rh":"'+ rh + '"}';
+
+                    console.log(jsonCreate);
+                    $.ajax({
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        url: 'http://localhost:8080/donator/create',
+                        type: 'POST',
+                        data: jsonCreate,
+                        dataType: 'text',
+                        success: function (result) {
+                            //listSpareParts();
+                            //getElements(stat);
+                            getDonator();
+                            alert(result);
+                            //console.log(result+"*********");
+                        }
+                    });
+                });
+
+
+                // $(document).on('click', '.deleteMenu_item', function () {
+                //     var iddata = ($(this).parent().parent()).find('.dataid').html();
+                //     $.ajax({
+                //         url: 'http://localhost:8080/doctor/deleteById/' + iddata,
+                //         type: 'DELETE',
+                //         success: function (result) {
+                //             //getElements(stat);
+                //             getDoctors();
+                //             alert(result);
+                //             //modalPicture();
+                //         }, error: function (xhr, textStatus, errorThrown) {
+                //             alert(xhr.responseText);
+                //         }
+                //     });
+                // });
+
+            }
+        );
+
+
+
+        function load_home() {
+            document.getElementById("content").innerHTML='<object type="text/html" data="Acasa.html" ></object>';
+        }
+
+        function tabel(id_element) {
+            var x = document.getElementById(id_element);
+            if (x.style.display != "none") {
+                hide(id_element);
+            } else {
+                x.style.display = "block";
+                x.style.display = "inline";
+            }
+        }
+
+        function hide(id_element)
+        {
+            var x = document.getElementById(id_element);
+            document.getElementsByTagName();
+            x.style.display = "none";
+        }
+
+        function hideElem(id_element){
+            var elem = document.getElementById(id_element);
+            elem.style.display = "none";
+        }
+
+        function hideAll()
+        {
+            var elements = document.getElementsByClassName("groupBox");
+            for(var i=0; i<elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+        }
+
+        function show(id_element)
+        {
+            var x = document.getElementById(id_element);
+            x.style.display ="block";
+        }
+
+        function ifChecked() {
+
+            if (document.getElementById("optionDa").checked == true) {
+                alert("Programare acceptata!");
+                document.getElementsByClassName("td").Color = Green;
+            }
+            else if (document.getElementById("optionNu").checked == true) {
+                alert("Programare respinsa!");
+                document.getElementsByClassName("td").Color = Red;
+            }
+            else if (document.getElementById("optionDa2").checked == true) {
+                alert("Programare acceptata!");
+                document.getElementsByClassName("td").Color = Red;
+            }
+            else if (document.getElementById("optionNu2").checked == true) {
+                alert("Programare respinsa!");
+                document.getElementsByClassName("td").Color = Red;
+            }
+            else {
+                // DO NOTHING
+            }
+        }
+
+    </script>
 </head>
 
 
@@ -21,13 +225,13 @@
     </div>
 
     <ul class="main-navigation" >
-        <li><a href="#" onclick="hideAll(); show('vizAcasa'); show('content')"><b>Acasa</b></a></li>
+        <li><a href="#" onclick="hideAll();"><b>Acasa</b></a></li>
         <li><a href="#"><b>Management</b></a>
             <ul>
                 <li><a href="#"><b>Donatori</b></a>
                     <ul>
                         <li><a href="#" onclick="hideAll(); show('vizDonatori'); tabel('tabelDonatori')"><b>Vizualizare/Editare</b></a></li>
-                        <li><a href="#" onclick="hideAll(); show('vizFormular'); show('formular');"><b>Adaugare</b></a>
+                        <li><a href="#" onclick="hideAll(); show('addDonator'); show('donator');"><b>Adaugare</b></a>
                     </ul>
                 </li>
                 <li><a href="#" onclick="hideAll(); show('vizCereri'); tabel('tabelCereri');"><b>Cereri</b></a>
@@ -39,44 +243,52 @@
                 <li><a href="#" onclick="hideAll(); show('adaugareAnunt'); localStorage.setItem('lastitem', document.getElementById('anunt').textContent)"><b>Adaugare</b></a>
             </ul>
         </li>
-        <li style="float: right"><a href="#"><b>Logout</b></a></li>
+        <li style="float: right"><a href="http://localhost:8080/acasa"><b>Logout</b></a></li>
     </ul>
 
     <!-- Acasa -->
-    <fieldset class="groupBox" id="vizAcasa" style="border: none; display: none;">
-        <iframe src="Acasa.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" style="width: 900px; height: 900px;" >
-        </iframe>
-    </fieldset>
+    <!--<fieldset class="groupBox" id="vizAcasa" style="border: none; display: none;">-->
+    <!--<iframe src="Acasa.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" style="width: 900px; height: 900px;" >-->
+    <!--</iframe>-->
+    <!--</fieldset>-->
 
     <!-- Generare tabel donatori -->
     <fieldset class="groupBox" id="vizDonatori" style="border: none; display: none">
 
         <div style="margin-top: 55px;">
             <table id="tabelDonatori" style="display: none;">
+                <thead>
                 <tr>
                     <th>Nume</th>
                     <th>Prenume</th>
-                    <th>Editare</th>
-                    <th>Stergere</th>
+                    <th>CNP</th>
+                    <th>Sex</th>
+                    <th>Telefon</th>
+                    <th>Adresa</th>
+                    <th>Email</th>
+                    <!--<th>Editare</th>-->
+                    <!--<th>Stergere</th>-->
                 </tr>
-                <tr>
-                    <td>Manea</td>
-                    <td>Robert</td>
-                    <td><img src="/FrontEnd/edit.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer" onclick="show('vizFormularEdit'); show('formularEdit')"></td>
-                    <td><img src="/FrontEnd/delete.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer"></td>
-                </tr>
-                <tr>
-                    <td>Trambitas</td>
-                    <td>Aurel</td>
-                    <td><img src="/FrontEnd/edit.png" class="button_img" alt="Logo" width="45" height="45"></td>
-                    <td><img src="/FrontEnd/delete.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer"></td>
-                </tr>
-                <tr>
-                    <td>Achim</td>
-                    <td>Maluma</td>
-                    <td><img src="/FrontEnd/edit.png" class="button_img" alt="Logo" width="45" height="45"></td>
-                    <td><img src="/FrontEnd/delete.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer"></td>
-                </tr>
+                </thead>
+                <tbody></tbody>
+                <!--<tr>-->
+                <!--<td>Manea</td>-->
+                <!--<td>Robert</td>-->
+                <!--<td><img src="/FrontEnd/edit.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer" onclick="show('vizFormularEdit'); show('formularEdit')"></td>-->
+                <!--<td><img src="/FrontEnd/delete.png" class="button_img"  alt="Logo" width="45" height="45" style="cursor: pointer"></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>Trambitas</td>-->
+                <!--<td>Aurel</td>-->
+                <!--<td><img src="/FrontEnd/edit.png" class="button_img" alt="Logo" width="45" height="45"></td>-->
+                <!--<td><img src="/FrontEnd/delete.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer"></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>Achim</td>-->
+                <!--<td>Maluma</td>-->
+                <!--<td><img src="/FrontEnd/edit.png" class="button_img" alt="Logo" width="45" height="45"></td>-->
+                <!--<td><img src="/FrontEnd/delete.png" class="button_img" alt="Logo" width="45" height="45" style="cursor: pointer"></td>-->
+                <!--</tr>-->
             </table>
         </div>
 
@@ -89,7 +301,7 @@
 
             <fieldset id="formularEdit" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
 
-                <legend><b>Formular solicitare</b></legend>
+                <legend><b>Modificare donator</b></legend>
                 <div>
                     Nume:
                     <input type="text" name="firstname" value="Manea">
@@ -99,7 +311,7 @@
                     <br><br>
                 </div>
 
-                <button class="cupid-red" type="button" onclick="alert('Editare donator efectuata!')">Editare</button>
+                <button class="cupid-red" type="button" onclick="alert('Editare donator efectuata!'); hideElem('formularEdit');window.location.reload()">Editare</button>
 
             </fieldset>
 
@@ -108,27 +320,52 @@
     </fieldset>
 
     <!-- Generare formular -->
-    <fieldset class="groupBox" id="vizFormular" style="border: none; display: none">
-
+    <fieldset class="groupBox" id="addDonator" style="border: none; display: none">
+        <h3>Adaugare donator</h3><br>
         <div style="margin-top: 55px;">
 
-            <fieldset id="formular" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
-
-                <legend><b>Formular solicitare</b></legend>
+            <form id="donator" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
                 <div>
                     Nume:
-                    <input type="text" name="firstname" value="">
+                    <input type="text" id="nume" value="">
                     <br>
                     Prenume:
-                    <input type="text" name="lastname" value="">
+                    <input type="text" id="prenume" value="">
+                    <br>
+                    CNP:
+                    <input type="text" id="cnp" value="">
+                    <br>
+                    Sex:
+                    <input group ="sex" type="radio" name="gender" value="male" onchange="checkMale()" checked> Male
+                    <input group ="sex" type="radio" name="gender" value="female" onchange="checkFemale()"> Female
                     <br><br>
+                    <br>
+                    Telefon:
+                    <input type="text" id="telefon" value="">
+                    <br>
+                    Adresa:
+                    <input type="text" id="adresa" value="">
+                    <br>
+                    Email:
+                    <input type="text" id="email" value="">
+                    <br>
+                    Password:
+                    <input type="text" id="password" value="">
+                    <br>
+                    Rh:
+                    <input group ="rh" type="radio" value="pozitiv" onchange="checkPozitiv()" checked> Pozitiv
+                    <input group ="rh" type="radio"  value="negativ" onchange="checkNegativ()"> Negativ
+                    <br>
+                    Grupa:
+                    <input group ="grupa" type="radio"  value="pozitiv" onchange="checkO1()" checked> O1
+                    <input group ="grupa" type="radio"  value="negativ" onchange="checkA2()"> A2
+                    <input group ="grupa" type="radio"  value="pozitiv" onchange="checkB3()" > B3
+                    <input group ="grupa" type="radio"  value="negativ" onchange="checkAB4()"> AB4
+                    <br>
                 </div>
 
-                <button class="cupid-red" type="button" onclick="alert('Solicitare inregistrata!')">Trimite</button>
-
-            </fieldset>
-
-            <button class="cupid-red" type="button">Sange</button>
+            </form>
+            <button id="Salveaza" class="cupid-red" type="button">Adaugare</button>
 
         </div>
 
@@ -199,73 +436,6 @@
 
 
 </div>
-
-<script>
-
-    function load_home() {
-        document.getElementById("content").innerHTML='<object type="text/html" data="Acasa.html" ></object>';
-    }
-
-    function tabel(id_element) {
-        var x = document.getElementById(id_element);
-        if (x.style.display != "none") {
-            hide(id_element);
-        } else {
-            x.style.display = "block";
-            x.style.display = "inline";
-        }
-    }
-
-    function hide(id_element)
-    {
-        var x = document.getElementById(id_element);
-        document.getElementsByTagName();
-        x.style.display = "none";
-    }
-
-    function hideElem(id_element){
-        var elem = document.getElementById(id_element);
-        elem.style.display = "none";
-    }
-
-    function hideAll()
-    {
-        var elements = document.getElementsByClassName("groupBox");
-        for(var i=0; i<elements.length; i++) {
-            elements[i].style.display = "none";
-        }
-    }
-
-    function show(id_element)
-    {
-        var x = document.getElementById(id_element);
-        x.style.display ="block";
-    }
-
-    function ifChecked() {
-
-        if (document.getElementById("optionDa").checked == true) {
-            alert("Programare acceptata!");
-            document.getElementsByClassName("td").Color = Green;
-        }
-        else if (document.getElementById("optionNu").checked == true) {
-            alert("Programare respinsa!");
-            document.getElementsByClassName("td").Color = Red;
-        }
-        else if (document.getElementById("optionDa2").checked == true) {
-            alert("Programare acceptata!");
-            document.getElementsByClassName("td").Color = Red;
-        }
-        else if (document.getElementById("optionNu2").checked == true) {
-            alert("Programare respinsa!");
-            document.getElementsByClassName("td").Color = Red;
-        }
-        else {
-            // DO NOTHING
-        }
-    }
-
-</script>
 
 </body>
 

@@ -50,14 +50,14 @@ $(document).ready(function()
 
            if(qwerty === "donator" && qwerty2 === "donator")
            {
-               console.log("GOING TO THE PACIENT");
+               console.log("GOING TO THE DONATOR");
 
                window.location = "http://localhost:8080/donator";
            }
 
            if(qwerty === "personal" && qwerty2 === "personal")
            {
-               console.log("GOING TO THE ASISTENT");
+               console.log("GOING TO THE PERSONAL");
 
                window.location = "http://localhost:8080/personal";
            }

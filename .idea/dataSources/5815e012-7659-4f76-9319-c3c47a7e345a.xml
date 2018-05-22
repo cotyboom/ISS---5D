@@ -51,7 +51,8 @@
     </role>
     <schema id="11" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-03-21.16:36:13.619</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-05-22.21:45:54.183</IntrospectionTimestamp>
+      <IntrospectionStateNumber>673</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -70,5 +71,634 @@
     <schema id="16" parent="2" name="information_schema">
       <ObjectId>12648</ObjectId>
     </schema>
+    <sequence id="17" parent="11" name="hibernate_sequence">
+      <ObjectId>16454</ObjectId>
+      <StateNumber>577</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="18" parent="11" name="analize">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>661</StateNumber>
+    </table>
+    <table id="19" parent="11" name="analize_list_intrebare">
+      <ObjectId>16400</ObjectId>
+      <StateNumber>579</StateNumber>
+    </table>
+    <table id="20" parent="11" name="doctor">
+      <ObjectId>16403</ObjectId>
+      <StateNumber>561</StateNumber>
+    </table>
+    <table id="21" parent="11" name="donator">
+      <ObjectId>16411</ObjectId>
+      <StateNumber>673</StateNumber>
+    </table>
+    <table id="22" parent="11" name="donator_list_analize">
+      <ObjectId>16419</ObjectId>
+      <StateNumber>581</StateNumber>
+    </table>
+    <table id="23" parent="11" name="donator_list_formular">
+      <ObjectId>16422</ObjectId>
+      <StateNumber>583</StateNumber>
+    </table>
+    <table id="24" parent="11" name="formular">
+      <ObjectId>16425</ObjectId>
+      <StateNumber>662</StateNumber>
+    </table>
+    <table id="25" parent="11" name="formular_list_intrebare">
+      <ObjectId>16430</ObjectId>
+      <StateNumber>585</StateNumber>
+    </table>
+    <table id="26" parent="11" name="intrebare">
+      <ObjectId>16433</ObjectId>
+      <StateNumber>664</StateNumber>
+    </table>
+    <table id="27" parent="11" name="personal">
+      <ObjectId>16438</ObjectId>
+      <StateNumber>568</StateNumber>
+    </table>
+    <column id="28" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>559</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="29" parent="18" name="data_analiza">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="30" parent="18" name="grupa_sangvina">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="31" parent="18" name="rh">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="32" parent="18" name="rh_person">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>586</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="33" parent="18" name="date">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>587</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="34" parent="18" name="id_donator">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>661</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="35" parent="18" name="analize_pkey">
+      <ObjectId>16398</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="18" name="analize_pkey">
+      <ObjectId>16399</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>analize_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="19" name="analize_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>560</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="38" parent="19" name="list_intrebare_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>560</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="39" parent="19" name="uk_5nrujtl11a6pwxvjlqa1nk7xl">
+      <ObjectId>16446</ObjectId>
+      <ColNames>list_intrebare_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="19" name="uk_5nrujtl11a6pwxvjlqa1nk7xl">
+      <ObjectId>16447</ObjectId>
+      <ColNames>list_intrebare_id</ColNames>
+      <UnderlyingIndexName>uk_5nrujtl11a6pwxvjlqa1nk7xl</UnderlyingIndexName>
+    </key>
+    <foreign-key id="41" parent="19" name="fkni405uqy3e3yvor5nmkofu0mw">
+      <ObjectId>16461</ObjectId>
+      <ColNames>analize_id</ColNames>
+      <RefTableId>16395</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>analize</RefTableName>
+      <RefKeyName>analize_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="19" name="fkkj22nbt2ljxmkp0ony3qty0yr">
+      <ObjectId>16456</ObjectId>
+      <ColNames>list_intrebare_id</ColNames>
+      <RefTableId>16433</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>intrebare</RefTableName>
+      <RefKeyName>intrebare_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="43" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>561</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="44" parent="20" name="cnp">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="45" parent="20" name="adresa">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="20" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="20" name="nume">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="48" parent="20" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="20" name="prenume">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="20" name="sex">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="51" parent="20" name="telefon">
+      <Position>9</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="52" parent="20" name="username">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="20" name="rol">
+      <Position>11</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>561</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="54" parent="20" name="doctor_pkey">
+      <ObjectId>16409</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="20" name="doctor_pkey">
+      <ObjectId>16410</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>doctor_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>562</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="57" parent="21" name="cnp">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="21" name="adresa">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="59" parent="21" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="60" parent="21" name="nume">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="61" parent="21" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="62" parent="21" name="prenume">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="63" parent="21" name="sex">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="64" parent="21" name="telefon">
+      <Position>9</Position>
+      <DataType>varchar(500)|0</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="65" parent="21" name="username">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="66" parent="21" name="rol">
+      <Position>11</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>562</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="67" parent="21" name="grupa">
+      <Position>12</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="21" name="rh">
+      <Position>13</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>673</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="69" parent="21" name="donator_pkey">
+      <ObjectId>16417</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="70" parent="21" name="donator_pkey">
+      <ObjectId>16418</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>donator_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="71" parent="22" name="donator_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>563</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="72" parent="22" name="list_analize_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>563</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="73" parent="22" name="uk_82daks5tdmpsfy8kw642iv5sw">
+      <ObjectId>16448</ObjectId>
+      <ColNames>list_analize_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="22" name="uk_82daks5tdmpsfy8kw642iv5sw">
+      <ObjectId>16449</ObjectId>
+      <ColNames>list_analize_id</ColNames>
+      <UnderlyingIndexName>uk_82daks5tdmpsfy8kw642iv5sw</UnderlyingIndexName>
+    </key>
+    <foreign-key id="75" parent="22" name="fkt6e1a80uvdu9odpbcc4yk7q1a">
+      <ObjectId>16471</ObjectId>
+      <ColNames>donator_id</ColNames>
+      <RefTableId>16411</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>donator</RefTableName>
+      <RefKeyName>donator_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="76" parent="22" name="fkfjyajl6p28nbo72fc8nq0hkwm">
+      <ObjectId>16466</ObjectId>
+      <ColNames>list_analize_id</ColNames>
+      <RefTableId>16395</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>analize</RefTableName>
+      <RefKeyName>analize_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="77" parent="23" name="donator_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>564</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="78" parent="23" name="list_formular_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>564</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="79" parent="23" name="uk_bjf3ftndjywmpqj4e5xu8exkc">
+      <ObjectId>16450</ObjectId>
+      <ColNames>list_formular_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="23" name="uk_bjf3ftndjywmpqj4e5xu8exkc">
+      <ObjectId>16451</ObjectId>
+      <ColNames>list_formular_id</ColNames>
+      <UnderlyingIndexName>uk_bjf3ftndjywmpqj4e5xu8exkc</UnderlyingIndexName>
+    </key>
+    <foreign-key id="81" parent="23" name="fk4g301a5580ev60bw7sqr4jbqa">
+      <ObjectId>16481</ObjectId>
+      <ColNames>donator_id</ColNames>
+      <RefTableId>16411</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>donator</RefTableName>
+      <RefKeyName>donator_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="82" parent="23" name="fkiur2j5ibjwmdc5vsu2nl60t77">
+      <ObjectId>16476</ObjectId>
+      <ColNames>list_formular_id</ColNames>
+      <RefTableId>16411</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>donator</RefTableName>
+      <RefKeyName>donator_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="83" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>565</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="84" parent="24" name="data_donare">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="85" parent="24" name="data_menstruatie">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="86" parent="24" name="data_nastere_copil">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="87" parent="24" name="greutate">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="88" parent="24" name="nume_pacient">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="89" parent="24" name="varsta">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>565</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="90" parent="24" name="date">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>588</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="91" parent="24" name="id_donator">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>662</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="92" parent="24" name="formular_pkey">
+      <ObjectId>16428</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="93" parent="24" name="formular_pkey">
+      <ObjectId>16429</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>formular_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="94" parent="25" name="formular_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>566</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="95" parent="25" name="list_intrebare_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>566</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="96" parent="25" name="uk_k9gsrnqjtyci7eqmd8ghm27gh">
+      <ObjectId>16452</ObjectId>
+      <ColNames>list_intrebare_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="97" parent="25" name="uk_k9gsrnqjtyci7eqmd8ghm27gh">
+      <ObjectId>16453</ObjectId>
+      <ColNames>list_intrebare_id</ColNames>
+      <UnderlyingIndexName>uk_k9gsrnqjtyci7eqmd8ghm27gh</UnderlyingIndexName>
+    </key>
+    <foreign-key id="98" parent="25" name="fk1nt7cdnt9cf37sa7bwxi7ka4l">
+      <ObjectId>16491</ObjectId>
+      <ColNames>formular_id</ColNames>
+      <RefTableId>16425</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>formular</RefTableName>
+      <RefKeyName>formular_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="99" parent="25" name="fkc5s7y6oacn7oafn2qurc0pvm">
+      <ObjectId>16486</ObjectId>
+      <ColNames>list_intrebare_id</ColNames>
+      <RefTableId>16433</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>intrebare</RefTableName>
+      <RefKeyName>intrebare_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="100" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>567</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="101" parent="26" name="intrebare">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>567</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="102" parent="26" name="raspuns_intrebare">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>567</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="103" parent="26" name="descriere">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>589</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="104" parent="26" name="id_analize">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>663</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="105" parent="26" name="id_formular">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>664</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="106" parent="26" name="intrebare_pkey">
+      <ObjectId>16436</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="107" parent="26" name="intrebare_pkey">
+      <ObjectId>16437</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>intrebare_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="108" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>568</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="109" parent="27" name="cnp">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="110" parent="27" name="adresa">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="111" parent="27" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="112" parent="27" name="nume">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="113" parent="27" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="114" parent="27" name="prenume">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="115" parent="27" name="sex">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="116" parent="27" name="telefon">
+      <Position>9</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="117" parent="27" name="username">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="118" parent="27" name="rol">
+      <Position>11</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>568</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="119" parent="27" name="personal_pkey">
+      <ObjectId>16444</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="120" parent="27" name="personal_pkey">
+      <ObjectId>16445</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>personal_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
