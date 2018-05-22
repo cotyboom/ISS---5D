@@ -43,4 +43,13 @@ public class AnalizeController {
         return analize;
     }
 
+    @RequestMapping(value = "/getByIdDonator/{id}", method = RequestMethod.GET)
+
+    public List<Analize> getByIdDonator(@PathVariable String id)
+    {
+        List<Analize> analize = analizeService.getAllByIdDonator(id);
+
+        return analize;
+    }
+
 }

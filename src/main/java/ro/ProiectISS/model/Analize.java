@@ -1,11 +1,8 @@
 package ro.ProiectISS.model;
 
 import lombok.*;
-import ro.ProiectISS.enumerable.GrupaSangvina;
-import ro.ProiectISS.enumerable.RH;
 
 import javax.persistence.*;
-import java.util.Date;
 
 
 @Entity
@@ -22,23 +19,27 @@ public class Analize
     private Long id;
 
     @Column
-    private Date date;
+    private String date;
 
     @Column
-    private GrupaSangvina grupaSangvina;
+    private String grupaSangvina;
 
     @Column
-    private RH rH;
+    private String rH;
 
     @Column
     private String idDonator;
 
+    @Column
+    private String rezultate;
 
-    public Analize(Date date, GrupaSangvina grupaSangvina, RH rH, String idDonator)
+
+    public Analize(String date, String grupaSangvina, String rH, String idDonator,String rezultate)
     {
         this.date = date;
         this.grupaSangvina = grupaSangvina;
         this.rH = rH;
         this.idDonator = idDonator;
+        this.rezultate = rezultate;
     }
 }

@@ -35,15 +35,15 @@
             grupa = 'O';
         }
         function checkA2() {
-            grupa = 1;
+            grupa = "A";
         }
 
         function checkB3() {
-            grupa = 2;
+            grupa = "B";
         }
 
         function checkAB4() {
-            grupa = 3;
+            grupa = "AB";
         }
         function getDonator() {
             $('#tabelDonatori tbody').empty();
@@ -57,6 +57,8 @@
                     row = row + '<td class="datatelefon" >' + item.telefon + '</td>';
                     row = row + '<td class="dataadresa" >' + item.adresa + '</td>';
                     row = row + '<td class="dataemail" >' + item.email + '</td>';
+                    row = row + '<td class="rh" >' + item.rh + '</td>';
+                    row = row + '<td class="grupa" >' + item.grupa + '</td>';
 
 
                     // row = row + '<td><button class="btn edit-item editMenu_item"><span class="glyphicon active glyphicon-pencil" aria-hidden="true"></span></button></td>';
@@ -82,6 +84,7 @@
         $(document).ready(
             function ()
             {
+                getCereriForDoctor()
                 getDonator();
                 checkFemale();
                 checkO1();
@@ -99,10 +102,9 @@
                     var adresa = $('#adresa').val();
                     var email = $('#email').val();
 
-                    var rol = 'EMPTY';
                     var password = $('#password').val();
                     clearFields();
-                    var jsonCreate = '{"nume":"' + nume + '","prenume":"' + prenume + '","cnp":"' + cnp + '","sex":"' + sex + '","telefon":"' + telefon + '","adresa":"' + adresa + '","email":"' + email + '","rol":"' + rol + '","password":"'+ password + '","grupa":"'+ grupa +'","rh":"'+ rh + '"}';
+                    var jsonCreate = '{"nume":"' + nume + '","prenume":"' + prenume + '","cnp":"' + cnp + '","sex":"' + sex + '","telefon":"' + telefon + '","adresa":"' + adresa + '","email":"' + email  + '","password":"'+ password + '","grupa":"'+ grupa +'","rh":"'+ rh + '"}';
 
                     console.log(jsonCreate);
                     $.ajax({
@@ -144,7 +146,104 @@
             }
         );
 
+        function getCereriForDoctor() {
+            console.log("here");
+            var url = 'http://localhost:8080/cerere/';
+            $('#tabelCereri tbody').empty();
+            $.getJSON(url, function (data) {
+                $.each(data, function (index, item) {
+                    var row = '<tr>';
+                    row = row + '<td class="date" >' + item.date + '</td>';
+                    row = row + '<td class="nume" >' + item.nume + '</td>';
+                    row = row + '<td class="prenume" >' + item.prenume + '</td>';
+                    row = row + '<td class="grupa" >' + item.grupa + '</td>';
+                    row = row + '<td class="rh" >' + item.rh + '</td>';
+                    row = row + '<td class="cantitate" >' + item.cantitate + '</td>';
+                    idCerere = item.id;
+                    if (item.stare === "confirmat") {
+                        stare = "<div><input type=\"radio\" name=\"option1\" id=\"optionDa\" checked onclick=\"ifCheckedDa(idCerere)\"> Da "+
+                            "<input type=\"radio\" name=\"option1\" id=\"optionNu\" onclick=\"ifCheckedNu(idCerere)\" > Nu </div>"
+                    } else {
+                        stare = "<div><input type=\"radio\" name=\"option1\" id=\"optionDa\"  onclick=\"ifCheckedDa(idCerere)\"> Da "+
+                            "<input type=\"radio\" name=\"option1\" id=\"optionNu\" checked onclick=\"ifCheckedNu(idCerere)\"> Nu </div>"
+                    }
+                    row = row + '<td class="stare" >' + stare + '</td>';
+                    return $('#tabelCereri tbody').append(row);
+                });
+            });
+        }
 
+        function ifCheckedDa(id){
+            console.log("id=" + id);
+            var url = 'http://localhost:8080/cerere/getById/' + id;
+            $.getJSON(url, function (data) {
+                grupa = data.grupa;
+                rh = data.rh;
+                cantitateDeRedus = data.cantitate;
+                var jsonCreate = '{"idDoctor":"' + data.idDoctor + '", "nume":"' + data.nume + '", "prenume":"' + data.prenume + '", "grupa":"' + data.grupa +'", "rh":"' + data.rh + '", "cantitate":"' + data.cantitate + '", "date":"' + data.date + '", "stare":"' + "confirmat" + '"}'
+                console.log(jsonCreate);
+                $.ajax({
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    url: 'http://localhost:8080/cerere/update/'+ id,
+                    type: 'POST',
+                    data: jsonCreate,
+                    dataType: 'text',
+                    success: function (result) {
+
+                    }});
+                    var url1 = 'http://localhost:8080/stoc/getByGrupa/' + grupa;
+                $.getJSON(url1, function (data1) {
+                    $.each(data1, function (index, item) {
+                        console.log(item.rh + "===" + rh);
+                        if(item.rh === rh){
+                            // cantitate = item.cantitate - cantitateDeRedus ;
+                            console.log(cantitate);
+                            var jsonCreate1 = '{"grupa":"' + item.grupa + '", "rh":"' + item.rh + '", "cantitate":"' + item.cantitate +'"}';
+                            console.log(jsonCreate1);
+                            $.ajax({
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'Content-Type': 'application/json'
+                                },
+                                url: 'http://localhost:8080/stoc/update/'+ item.id,
+                                type: 'POST',
+                                data: jsonCreate1,
+                                dataType: 'text',
+                                success: function (result) {
+                                    alert("Realizat");
+
+                                }});
+                        }
+                    });
+                });
+            });
+        }
+
+        function ifCheckedNu(id){
+            console.log("id=" + id);
+            var url = 'http://localhost:8080/cerere/getById/' + id;
+            $.getJSON(url, function (data) {
+                var jsonCreate = '{"idDoctor":"' + data.idDoctor + '", "nume":"' + data.nume + '", "prenume":"' + data.prenume + '", "grupa":"' + data.grupa +'", "rh":"' + data.rh + '", "cantitate":"' + data.cantity + '", "date":"' + data.date + '", "stare":"' + "neconfirmat" + '"}';
+                console.log(jsonCreate);
+                $.ajax({
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    url: 'http://localhost:8080/cerere/update/'+ id,
+                    type: 'POST',
+                    data: jsonCreate,
+                    dataType: 'text',
+                    success: function (result) {
+                        alert(result);
+
+                    }
+                });
+            });
+        }
 
         function load_home() {
             document.getElementById("content").innerHTML='<object type="text/html" data="Acasa.html" ></object>';
@@ -230,7 +329,7 @@
             <ul>
                 <li><a href="#"><b>Donatori</b></a>
                     <ul>
-                        <li><a href="#" onclick="hideAll(); show('vizDonatori'); tabel('tabelDonatori')"><b>Vizualizare/Editare</b></a></li>
+                        <li><a href="#" onclick="hideAll(); show('vizDonatori'); tabel('tabelDonatori')"><b>Vizualizare</b></a></li>
                         <li><a href="#" onclick="hideAll(); show('addDonator'); show('donator');"><b>Adaugare</b></a>
                     </ul>
                 </li>
@@ -266,6 +365,8 @@
                     <th>Telefon</th>
                     <th>Adresa</th>
                     <th>Email</th>
+                    <th>RH</th>
+                    <th>Grupa</th>
                     <!--<th>Editare</th>-->
                     <!--<th>Stergere</th>-->
                 </tr>
@@ -373,31 +474,19 @@
 
     <!-- Management cereri -->
     <fieldset class="groupBox" id="vizCereri" style="display: none; border: none;">
-        <table id="tabelCereri" style="display: none;">
+        <table id='tabelCereri' class='table'>
+            <thead>
             <tr>
-                <th id="textData">Data</th>
-                <th>Ora</th>
-                <th>Pacient</th>
-                <th>Confirmare</th>
+                <th>Data</th>
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Grupa</th>
+                <th>RH</th>
+                <th>Cantitate</th>
+                <th>Status</th>
             </tr>
-            <tr>
-                <td>21.09.2018</td>
-                <td>10:20</td>
-                <td>Kolumban</td>
-                <td>
-                    <input type="radio" name="option1" id="optionDa" onclick="ifChecked()"> Da
-                    <input type="radio" name="option1" id="optionNu" onclick="ifChecked()"> Nu
-                </td>
-            </tr>
-            <tr>
-                <td>20.05.2018</td>
-                <td>12:45</td>
-                <td>Hadar</td>
-                <td>
-                    <input type="radio" name="option1" id="optionDa2" onclick="ifChecked()"> Da
-                    <input type="radio" name="option1" id="optionNu2" onclick="ifChecked()"> Nu
-                </td>
-            </tr>
+            </thead>
+            <tbody></tbody>
         </table>
     </fieldset>
 

@@ -31,4 +31,9 @@ public class AnalizeService
     public Analize getById(Long id) {
         return analizeRepository.findById(id);
     }
+
+    public List<Analize> getAllByIdDonator(String id)
+    {
+        return analizeRepository.findByIdDonator(id);
+    }
 }

@@ -6,7 +6,51 @@
     <title>Donator</title>
     <link rel="stylesheet" type="text/css" href="/FrontEnd/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script language="JavaScript" type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function getAnalizeForCurentDonator() {
+            var id = 1;
+            var url = 'http://localhost:8080/analize/getByIdDonator/' + id;
+            $('#tabelAnalize tbody').empty();
+            $.getJSON(url, function (data) {
+                $.each(data, function (index, item) {
+                    var row = '<tr>';
+                    row = row + '<td class="date" >' + item.date + '</td>';
+                    row = row + '<td class="grupaSangvina" >' + item.grupaSangvina + '</td>';
+                    console.log(item.rH);
+                    row = row + '<td class="rH" >' + item.rh + '</td>';
+                    return $('#tabelAnalize tbody').append(row);
+                });
+            });
+        }
+
+        function getIntrebari()
+        {
+            getAnalizeForCurentDonator();
+            $('#vizIntrebari tbody').empty();
+            $.getJSON('http://localhost:8080/intrebare/', function (data) {
+                $.each(data, function (index, item) {
+                    var row = '<tr>';
+                    console.log("here");
+                    row = row + '<td class="intrebare" >' + item.intrebare + '</td>';
+                    row = row + '<td class="raspuns" >' + item.raspuns_intrebare + '</td>';
+                    row = row + '</tr>';
+                    $('#vizIntrebari tbody').append(row);
+                });
+            });
+        }
+
+        $(document).ready(
+            function () {
+                getAnalizeForCurentDonator();
+                getIntrebari();
+            }
+        );
+    </script>
+
 </head>
+
 
 <body onload="anunt()">
 
@@ -22,279 +66,41 @@
     <ul class="main-navigation" >
         <li><a href="#" onclick="hideAll(); show('vizAcasa')"><b>Acasa</b></a></li>
         <li><a href="#" onclick="hideAll(); show('vizAnalize'); tabel('tabelAnalize')"><b>Istoric analize</b></a></li>
-        <li><a href="#" onclick="hideAll(); show('vizFormular'); show('formular')"><b>Completare formular</b></a></li>
-        <li style="float: right"><a href="#"><b>Logout</b></a></li>
+        <li><a href="#" onclick="hideAll(); show('vizIntrebari'); show('tabelIntrebari')"><b>Completare formular</b></a></li>
+        <li style="float: right"><a href="http://localhost:8080/acasa"><b>Logout</b></a></li>
     </ul>
 
     <!-- Generare tabel analize -->
-    <fieldset class="groupBox" id="vizAnalize" style="border: none; display: none">
-
-        <div style="margin-top: 55px;">
-            <table id="tabelAnalize" style="display: none;">
-                <tr>
-                    <th>Data</th>
-                    <th>Stoc</th>
-                </tr>
-                <tr>
-                    <td>21.09.2018</td>
-                    <td>nevoie sange</td>
-                </tr>
-                <tr>
-                    <td>20.05.2018</td>
-                    <td>gata</td>
-                </tr>
-                <tr>
-                    <td>28.05.2018</td>
-                    <td>kolu</td>
-                </tr>
-            </table>
-        </div>
-
+    <fieldset  class="groupBox" id="vizAnalize" style="display: none; border: none;">
+        <table id="tabelAnalize" style="display: none;">
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Grupa sangvina</th>
+                <th>RH</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </fieldset>
 
-    <!-- Generare formular -->
-    <fieldset class="groupBox" id="vizFormular" style="border: none; display: none">
 
-        <div style="margin-top: 55px;">
-
-            <fieldset id="formular" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
-
-                <legend><b>Formular donare sange</b></legend>
-                <label>
-                    <span>Nume:</span>
-                    <input type="text" name="nume">
-
-                    <span></span><b>Prenume:</b>
-                    <input type="text" name="prenume">
-                </label>
-                <label>
-                    <span>Adresa:</span>
-                    <input type="text" name="cnp">
-
-                    <span></span><b>Telefon:</b>
-                    <input type="text" name="telefon">
-                </label>
-                <label>
-                    <span>Data donarii: </span>
-                    <input type="date" name="data">
-                </label>
-                <label>
-                    <span>Grupa de sange: </span>
-                    <select>
-                        <option value="grp"></option>
-                        <option value="grp">O</option>
-                        <option value="grp">A</option>
-                        <option value="grp">B</option>
-                        <option value="grp">AB</option>
-                    </select>
-                </label>
-                <label>
-                    <span>RH: </span>
-                    <select>
-                        <option value="grp"></option>
-                        <option value="grp">Pozitiv</option>
-                        <option value="grp">Negativ</option>
-                    </select>
-                </label><br>
-                <label>
-                    <p>Consideraţi că aveţi o stare bună de sănătate?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span><br><br>
-                    </label>
-
-                    <p>Urmati vreun tratament medicamentos?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span><br><br>
-                    </label>
-
-                    <p>In ultimele 12 luni ati avut contact sexual cu un partener cu hepatita sau HIV pozitiv?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span><br><br>
-                    </label>
-
-                    <p>V-ati injectat vreodata droguri?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span><br><br>
-                    </label>
-
-                    <p>In ultimele 12 luni ati suferit de vreo interventie chirurgicala?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span><br><br>
-                    </label>
-
-                    <p>*pentru femei</p><br>
-                    <p>In ultimele 12 luni ati fost insarcinata?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span><br>
-                    </label>
-
-                    <label>
-                        <p>Data nasterii ultimului copil: </p>
-                        <input type="date" name="data">
-                    </label>
-
-                    <label>
-                        <p>Data ultimei menstruatii: </p>
-                        <input type="date" name="data">
-                    </label><br><br>
-
-                    <p> V-aţi născut, aţi trăit sau călătorit în străinătate?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label>
-                        <span style="font-size: 15px">Unde?</span>
-                        <input type="text" name="nume">
-                    </label><br><br>
-
-                    <p>Aţi fost în detenţie (INCHISOARE) în ultimul an?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <p>Aţi suferit vreodata de?</p><br>
-                    <h5 style="display: inline">- icter, tuberculoză, febră reumatică, malarie</h5>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <h5 style="display: inline">- boli de inimă, tensiune arterială mare sau mică</h5>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <h5 style="display: inline">- boli transmise sexual (hiv, sifilis etc)</h5>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <h5 style="display: inline">- accidente vasculare cardiace sau cerebrale</h5>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <p>Sunteţi fumător?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <p>Aţi consumat alcool recent ?</p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label><br><br>
-
-                    <p>Aţi fost refuzat sau amânat la o donare anterioară? </p>
-                    <label class="containerCheck">Da
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="containerCheck">Nu
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
+    <!-- Generare tabel intrebari formular -->
+    <fieldset  class="groupBox" id="vizIntrebari" style="display: none; border: none;">
+        <table id="tabelIntrebari" style="display: none;">
+            <thead>
+            <tr>
+                <th>Intrebare</th>
+                <th>Raspuns</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button class="cupid-red" type="button" onclick="alert('Formular trimis!'); hideElem('formular')">Trimite</button>
+    </fieldset>
 
 
-                </label>
 
-                <button class="cupid-red" type="button" onclick="alert('Formular trimis!'); hideElem('formular')">Trimite</button>
-
-            </fieldset>
-
-
-            <div>
-                <table id="rezultatAnalize" style="display: none;">
-                    <tr>
-                        <th>Data</th>
-                        <th>Stoc</th>
-                    </tr>
-                    <tr>
-                        <td>21.09.2018</td>
-                        <td>nevoie sange</td>
-                    </tr>
-                    <tr>
-                        <td>20.05.2018</td>
-                        <td>gata</td>
-                    </tr>
-                    <tr>
-                        <td>28.05.2018</td>
-                        <td>kolu</td>
-                    </tr>
-                </table>
-
-            </div>
-
-        </div>
 
     </fieldset>
 

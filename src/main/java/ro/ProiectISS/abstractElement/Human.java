@@ -1,7 +1,6 @@
 package ro.ProiectISS.abstractElement;
 
 import lombok.*;
-import ro.ProiectISS.enumerable.Sex;
 
 import javax.persistence.*;
 
@@ -37,16 +36,13 @@ public abstract class Human
     private String email;
 
     @Column
-    private String username;
-
-    @Column
     private String password;
 
     @Column
-    private Sex sex;
+    private String sex;
 
 
-    public Human(String nume, String prenume, String CNP, String telefon, String adresa, String email, String username, String password, Sex sex)
+    public Human(String nume, String prenume, String CNP, String telefon, String adresa, String email, String password, String sex)
     {
         this.nume = nume;
         this.prenume = prenume;
@@ -54,7 +50,6 @@ public abstract class Human
         this.telefon = telefon;
         this.adresa = adresa;
         this.email = email;
-        this.username = username;
         this.password = password;
         this.sex = sex;
     }

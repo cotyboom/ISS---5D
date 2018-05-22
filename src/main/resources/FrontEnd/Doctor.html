@@ -6,105 +6,12 @@
     <title>Doctor</title>
     <link rel="stylesheet" type="text/css" href="/FrontEnd/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-
-<body>
-
-    <div class="container">
-
-        <img src="/FrontEnd/logo.jpg" alt="Logo" width="150" height="110" style="display:inline">
-
-        <div class="top_right">
-            <img src="/FrontEnd/telefon.png" alt="Logo" width="15" height="15"> <b> (0264) 315178</b><br>
-            <img src="/FrontEnd/mail.png" alt="Logo" width="15" height="15" ><b> clinica5D@gmail.com</b>
-        </div>
-
-        <ul class="main-navigation" >
-            <li><a href="#"><b>Acasa</b></a></li>
-            <li><a href="#" onclick="hideAll(); show('vizStoc'); tabel('tabelStoc')"><b>Verficare stoc</b></a></li>
-            <li><a href="#" onclick="hideAll(); show('vizCereri'); tabel('tabelCereri')"><b>Status cerere</b></a></li>
-            <li style="float: right"><a href="#"><b>Logout</b></a></li>
-        </ul>
-
-        <!-- Generare tabel stoc -->
-        <fieldset class="groupBox" id="vizStoc" style="border: none; display: none">
-
-            <div style="margin-top: 55px;">
-                <table id="tabelStoc" style="display: none;">
-                    <tr>
-                        <th>Data</th>
-                        <th>Stoc</th>
-                    </tr>
-                    <tr>
-                        <td>21.09.2018</td>
-                        <td>nevoie sange</td>
-                    </tr>
-                    <tr>
-                        <td>20.05.2018</td>
-                        <td>gata</td>
-                    </tr>
-                    <tr>
-                        <td>28.05.2018</td>
-                        <td>kolu</td>
-                    </tr>
-                </table>
-            </div>
-
-            <button class="cupid-red" type="button" onclick="show('formularSolicitare');">Solicitare sange</button>
-
-            <fieldset id="formularSolicitare" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
-
-                <legend><b>Formular solicitare</b></legend>
-                <div>
-                    Nume:
-                    <input type="text" name="firstname" value="">
-                    <br>
-                    Prenume:
-                    <input type="text" name="lastname" value="">
-                    <br><br>
-                </div>
-
-                <button class="cupid-red" type="button" onclick="alert('Solicitare inregistrata!')">Trimite</button>
-                <button class="cupid-red" type="button" onclick="hideElem('formularSolicitare')">Anulare</button>
-
-            </fieldset>
-
-        </fieldset>
-
-        <!-- Generare tabel cereri -->
-        <fieldset class="groupBox" id="vizCereri" style="border: none; display: none">
-
-            <div style="margin-top: 55px;">
-                <table id="tabelCereri" style="display: none;">
-                    <tr>
-                        <th>Data</th>
-                        <th>Stoc</th>
-                        <th>Status</th>
-                    </tr>
-                    <tr>
-                        <td>21.09.2018</td>
-                        <td>nevoie sange</td>
-                        <td>nevoie sange</td>
-                    </tr>
-                    <tr>
-                        <td>20.05.2018</td>
-                        <td>gata</td>
-                        <td>aia e</td>
-                    </tr>
-                    <tr>
-                        <td>28.05.2018</td>
-                        <td>kolu</td>
-                        <td>In asteptare</td>
-                    </tr>
-                </table>
-            </div>
-
-        </fieldset>
-
-    </div>
+    <script language="JavaScript" type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
+        id = window.location.pathname.split("/")[2];
+
         function tabel(id_element) {
             var x = document.getElementById(id_element);
             if (x.style.display != "none") {
@@ -141,30 +48,313 @@
             x.style.display ="block";
         }
 
-        function ifChecked() {
-
-            if (document.getElementById("optionDa").checked == true) {
-                alert("Programare acceptata!");
-                document.getElementsByClassName("td").Color = Green;
-            }
-            else if (document.getElementById("optionNu").checked == true) {
-                alert("Programare respinsa!");
-                document.getElementsByClassName("td").Color = Red;
-            }
-            else if (document.getElementById("optionDa2").checked == true) {
-                alert("Programare acceptata!");
-                document.getElementsByClassName("td").Color = Red;
-            }
-            else if (document.getElementById("optionNu2").checked == true) {
-                alert("Programare respinsa!");
-                document.getElementsByClassName("td").Color = Red;
-            }
-            else {
-                // DO NOTHING
-            }
+        function getStocForDoctor() {
+            var url = 'http://localhost:8080/stoc/';
+            $('#tabelStoc tbody').empty();
+            $.getJSON(url, function (data) {
+                $.each(data, function (index, item) {
+                    var row = '<tr>';
+                    row = row + '<td class="grupa" >' + item.grupa + '</td>';
+                    row = row + '<td class="rh" >' + item.rh + '</td>';
+                    row = row + '<td class="cantitate" >' + item.cantitate + '</td>';
+                    return $('#tabelStoc tbody').append(row);
+                });
+            });
         }
 
+        function getCereriForDoctor() {
+            var url = 'http://localhost:8080/cerere/';
+            $('#tabelCereri tbody').empty();
+            $.getJSON(url, function (data) {
+                $.each(data, function (index, item) {
+                    var row = '<tr>';
+                    row = row + '<td class="date" >' + item.date + '</td>';
+                    row = row + '<td class="nume" >' + item.nume + '</td>';
+                    row = row + '<td class="prenume" >' + item.prenume + '</td>';
+                    row = row + '<td class="grupa" >' + item.grupa + '</td>';
+                    row = row + '<td class="rh" >' + item.rh + '</td>';
+                    row = row + '<td class="cantitate" >' + item.cantitate + '</td>';
+                    row = row + '<td class="stare" >' + item.stare + '</td>';
+                    return $('#tabelCereri tbody').append(row);
+                });
+            });
+        }
+
+        function clearFieldsFisa() {
+            $('#firstname').val('');
+            $('#lastname').val('');
+            $('#grupa').val('');
+            $('#rh').val('');
+            $('#cantity').val('');
+            $('#date').val('');
+        }
+
+        function clearFieldsDonare(){
+            $('#grupaSange').val('');
+            $('#rhDonare').val('');
+            $('#cantitateDonare').val('');
+        }
+
+        function clearFieldsDonator()
+        {
+            $('#dateDonator').val('');
+            $('#grupaDonator').val('');
+            $('#rhDonator').val('');
+            $('#rezultate').val('');
+        }
+
+        function dropDownDonatorForDoctor() {
+            $.getJSON("http://localhost:8080/donator/", function (result) {
+                var options = $("#dropDownDonator");
+                $.each(result, function (key, val) {
+                    var row = '<option id=P.' + val.id + ' >' + val.nume + " " + val.prenume + '<option />';
+                    options.append(row);
+                });
+            });
+        }
+
+
+        $(document).ready(
+            function () {
+                getStocForDoctor();
+                getCereriForDoctor();
+                dropDownDonatorForDoctor();
+
+                $(document).on('click', '#trimitere', function (){
+
+                    var nume = $('#firstname').val();
+                    var prenume = $('#lastname').val();
+                    var grupa = $('#grupa').val();6
+                    var rh = $('#rh').val();
+                    var cantity = $('#cantity').val();
+                    var date = $('#date').val();
+                    clearFieldsFisa();
+                    var idDoctor = "1";
+                    var stare = "neconfirmat";
+
+                    var jsonCreate = '{"idDoctor":"' + idDoctor + '", "nume":"' + nume + '", "prenume":"' + prenume + '", "grupa":"' + grupa +'", "rh":"' + rh + '", "cantitate":"' + cantity + '", "date":"' + date + '", "stare":"' + stare + '"}'
+
+                    console.log(jsonCreate);
+                    $.ajax({
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        url: 'http://localhost:8080/cerere/create',
+                        type: 'POST',
+                        data: jsonCreate,
+                        dataType: 'text',
+                        success: function (result) {
+                            alert("S-a salvat");
+                        }
+                    })
+                })
+
+                $(document).on('click', '#actualizareStoc', function () {
+
+                    var grupaSange = $('#grupaSange').val();
+                    var rhDonare = $('#rhDonare').val();
+                    var cantitateDonare = $('#cantitateDonare').val();
+                    clearFieldsDonare();
+
+                })
+
+                $(document).on('click', '#adaugareAnalize', function () {
+
+                    var id = $("#dropDownPacient").children(":selected").attr("id").split(".")[1];
+                    var dateDonator = $('#dateDonator').val();
+                    var grupaDonator = $('#grupaDonator').val();
+                    var rhDonator = $('#rhDonator').val();
+                    var rezultate = $('#rezultate').val();
+                    clearFieldsDonator();
+
+                    var jsonCreate = '{"idDonator":"' + id + '","grupaSangvina":"' + grupaDonator + '","rh":"' + rhDonator + '","rezultate":"' + rezultate + '","date":"' + dateDonator + '"}';
+                    console.log(jsonCreate);
+                    $.ajax({
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        url: 'http://localhost:8080/analize/create',
+                        type: 'POST',
+                        data: jsonCreate,
+                        dataType: 'text',
+                        success: function (result) {
+                            alert("S-a salvat");
+                        }
+                    });
+                })
+            })
+
     </script>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <img src="/FrontEnd/logo.jpg" alt="Logo" width="150" height="110" style="display:inline">
+
+    <div class="top_right">
+        <img src="/FrontEnd/telefon.png" alt="Logo" width="15" height="15"> <b> (0264) 315178</b><br>
+        <img src="/FrontEnd/mail.png" alt="Logo" width="15" height="15" ><b> clinica5D@gmail.com</b>
+    </div>
+
+    <ul class="main-navigation" >
+        <li><a href="#" onclick="hideAll();"><b>Acasa</b></a></li>
+        <li><a href="#" onclick="hideAll(); show('formularDonare')"><b>Doneaza sange</b></a></li>
+        <li><a href="#" onclick="hideAll(); show('vizDonatori')"><b>Adauga analize</b></a></li>
+        <li><a href="#" onclick="hideAll(); show('vizStoc'); tabel('tabelStoc')"><b>Verficare stoc</b></a></li>
+        <li><a href="#" onclick="hideAll(); show('vizCereri'); tabel('tabelCereri')"><b>Status cerere</b></a></li>
+        <li style="float: right"><a href="http://localhost:8080/acasa"><b>Logout</b></a></li>
+    </ul>
+
+    <!-- Generare tabel stoc -->
+    <fieldset class="groupBox" id="vizStoc" style="display: none; border: none;">
+        <table id='tabelStoc' class='table'>
+            <thead>
+            <tr>
+                <th>Grupa</th>
+                <th>RH</th>
+                <th>Cantitate sange</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </fieldset>
+
+    <button class="cupid-red" type="button" onclick="show('formularSolicitare');">Solicitare sange</button>
+
+    <fieldset class="groupBox" id="formularSolicitare" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
+
+        <legend><b>Formular solicitare</b></legend>
+        <div>
+            Nume:
+            <input type="text" id="firstname" value="">
+            <br>
+            Prenume:
+            <input type="text" id="lastname" value="">
+            <br>
+            Grupa de sange:
+            <input type="text" id="grupa" value="">
+            <br>
+            RH:
+            <input type="text" id="rh" value="">
+            <br>
+            Cantitatea de sange:
+            <input type="text" id="cantity" value="">
+            <br>
+            Data cererii:
+            <input type="text" id="date" value="">
+            <br><br>
+        </div>
+
+        <button class="cupid-red" type="button" id = "#trimitere" onclick="hideElem('formularSolicitare')">Trimite</button>
+        <button class="cupid-red" type="button" onclick="hideElem('formularSolicitare')">Anulare</button>
+
+    </fieldset>
+
+    <fieldset class="groupBox" id="formularDonare" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
+
+        <legend><b>Formular donare</b></legend>
+        <div>
+            Grupa de sange:
+            <input type="text" id="grupaSange" value="">
+            <br>
+            RH:
+            <input type="text" id="rhDonare" value="">
+            <br>
+            Cantitate:
+            <input type="text" id="cantitateDonare" value="">
+            <br><br>
+        </div>
+
+        <button class="cupid-red" type="button" id="actualizareStoc" onclick="hideElem('formularDonare')">Actualizare stoc</button>
+        <button class="cupid-red" type="button" onclick="hideElem('formularDonare')">Anulare</button>
+
+    </fieldset>
+    </fieldset>
+
+    <fieldset class="groupBox" id="vizDonatori" style="display: none; border: none;">
+        <p style="display: inline;"> Donator </p>
+        <select name="donatori" id="dropDownDonator" style="display: inline; margin-left: 20px;"
+                onchange="show('formularAnalize')">
+        </select>
+
+    </fieldset>
+
+    <fieldset class="groupBox" id="formularAnalize" style="display: none; margin-top: 25px; margin-right: 55px; margin-left: 55px;">
+
+        <legend><b>Adauga analize</b></legend>
+        <div>
+            Data:
+            <input type="text" id="dateDonator" value="">
+            <br>
+            Grupa:
+            <input type="text" id="grupaDonator" value="">
+            <br>
+            RH:
+            <input type="text" id="rhDonator" value="">
+            <br>
+            Rezultate analize:
+            <input type="text" id="rezultate" value="">
+            <br><br>
+        </div>
+
+        <button class="cupid-red" type="button" id = "#adaugareAnalize">Adaugare </button>
+        <button class="cupid-red" type="button" onclick="hideElem('formularAnalize')">Anulare</button>
+
+    </fieldset>
+
+
+    <!-- Generare tabel cereri -->
+    <fieldset class="groupBox" id="vizCereri" style="display: none; border: none;">
+        <table id='tabelCereri' class='table'>
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Grupa</th>
+                <th>RH</th>
+                <th>Cantitate</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </fieldset>
+
+</div>
+
+<script>
+
+    function ifChecked() {
+
+        if (document.getElementById("optionDa").checked == true) {
+            alert("Programare acceptata!");
+            document.getElementsByClassName("td").Color = Green;
+        }
+        else if (document.getElementById("optionNu").checked == true) {
+            alert("Programare respinsa!");
+            document.getElementsByClassName("td").Color = Red;
+        }
+        else if (document.getElementById("optionDa2").checked == true) {
+            alert("Programare acceptata!");
+            document.getElementsByClassName("td").Color = Red;
+        }
+        else if (document.getElementById("optionNu2").checked == true) {
+            alert("Programare respinsa!");
+            document.getElementsByClassName("td").Color = Red;
+        }
+        else {
+            // DO NOTHING
+        }
+    }
+
+</script>
 
 
 </body>
